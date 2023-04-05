@@ -1,0 +1,110 @@
+/* Main Styles */
+
+@font-face {
+  font-family: "MoreSugar";
+  src: url("../font/MoreSugar-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MoreSugar";
+  src: url("../font/MoreSugar-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "MoreSugar", sans-serif;
+  color: #353535;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.navbar-toggler-icon,
+.fa-search {
+  font-size: 2em;
+}
+
+.fa-search {
+  color: rgb(132, 130, 130);
+}
+
+.my-greet {
+  text-align: center;
+  background-color: #ffde59;
+  padding: 10%;
+}
+
+.myfooter {
+  background-color: #ffa51f;
+  color: #00000075;
+  /* bottom: 0; */
+  padding: 2% 0 3% 3%;
+  margin: 5% 0;
+}
+
+.myfooter a {
+  color: #00000075;
+  text-decoration: underline;
+}
+
+.icons {
+  margin: 40px 0;
+}
+
+#sig {
+  font-size: 60%;
+  line-height: 1px;
+  text-align: right;
+}
+
+.offcanvas,
+.offcanvas-title {
+  background-color: #ffde59;
+  font-size: 2rem;
+}
+
+.offcanvas li {
+  border-bottom: 2px solid orange;
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+  /* Small screens */
+
+  .navbar-brand img {
+    height: 100px;
+  }
+
+  .navbar-toggler-icon,
+  .fa-search {
+    font-size: 1.5em;
+  }
+
+  .offcanvas,
+.offcanvas-title {
+  background-color: #ffde59;
+  font-size: 1.5rem;
+}
+
+  .myfooter {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Medium screens */
+}
+
+@media (min-width: 992px) {
+  /* Large screens */
+}
