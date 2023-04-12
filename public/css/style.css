@@ -60,6 +60,10 @@ body {
   margin: 40px 0;
 }
 
+.mytext {
+  padding: 3%;
+}
+
 #sig {
   font-size: 60%;
   line-height: 1px;
