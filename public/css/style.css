@@ -28,11 +28,6 @@ body {
   max-width: 100%;
 }
 
-.navbar-toggler-icon,
-.fa-search {
-  font-size: 2em;
-}
-
 .fa-search {
   color: rgb(132, 130, 130);
 }
@@ -44,11 +39,20 @@ body {
 }
 
 .myfooter {
-  background-color: #ffa51f;
-  color: #00000075;
+  background-color: #ffde59;
+  color: #00000091;
   /* bottom: 0; */
   padding: 2% 0 3% 3%;
   margin: 5% 0;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+p, li {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.25rem;
 }
 
 .myfooter a {
@@ -60,12 +64,30 @@ body {
   margin: 40px 0;
 }
 
+hr {
+  border-top: 10px solid #ffa51f;
+  opacity: 1;
+  border-radius: 5px;
+  width: 90%;
+}
+
 .mytext {
-  padding: 3%;
+  padding: 5% 5% 0 5%;
+}
+
+.mytestimonials {
+  margin-top: 7%;
+}
+
+.card {
+  background-color: #129490; 
+  color: white;
+  font-size: 1.25rem;
+  border: none;
 }
 
 #sig {
-  font-size: 60%;
+  padding-top: 5%;
   line-height: 1px;
   text-align: right;
 }
@@ -84,31 +106,101 @@ body {
 
 @media (max-width: 767px) {
   /* Small screens */
-
+  
   .navbar-brand img {
     height: 100px;
   }
-
-  .navbar-toggler-icon,
-  .fa-search {
-    font-size: 1.5em;
+  
+  .mynav-button {
+    font-size: 1.5srem;
   }
-
+  
   .offcanvas,
-.offcanvas-title {
-  background-color: #ffde59;
-  font-size: 1.5rem;
-}
+  .offcanvas-title {
+    background-color: #ffde59;
+    font-size: 1.5rem;
+  }
 
   .myfooter {
     text-align: center;
   }
+  
+  .card {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .myimg {
+    padding-left: 5%;
+  }
+  
+  p, li {
+    font-size: 0.8rem;
+  }
+  
+  .mytext {
+    padding: 0 5% 5% 5%;
+    margin: 0;
+  }
+
+  .pt-5 {
+    padding-top: 0!important;
+  }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* Medium screens */
+  .navbar-brand img {
+    height: 150px;
+  }
+  
+    .mynav-button {
+      font-size: 2rem;
+    }
+
+  .card {
+    font-size: 0.8rem;
+  }
+
+  .myimg {
+    max-width: 92.5%
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+
+  .email-add {
+    font-size: 0.8rem;
+  }
+
 }
 
 @media (min-width: 992px) {
   /* Large screens */
+  body, h5 {
+    font-size: 150%;
+  }
+  
+  .navbar-brand img {
+    height: 200px;
+  }
+
+  .mynav-button {
+    font-size: 2.5rem;
+  }
+  
+  .display-1 {
+    font-size: 400%;
+  }
+  
+  /* .mytext {
+    margin-left: 5%;
+  } */
+
+  .myimg {
+    max-width: 100%
+  }
+
 }
