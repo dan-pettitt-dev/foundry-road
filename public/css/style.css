@@ -20,8 +20,12 @@ html {
 }
 
 body {
-  font-family: "MoreSugar", sans-serif;
+  font-family: 'Varela Round', sans-serif;
   color: #353535;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "MoreSugar", sans-serif;
 }
 
 .container {
@@ -74,6 +78,54 @@ hr {
 .mytext {
   padding: 5% 5% 0 5%;
 }
+
+.image-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: rgb(66, 66, 66);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.6em;
+  opacity: 0.8;
+}
+
+
+/* 
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: rgb(66, 66, 66);
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  font-size: 0.6em;
+  opacity: 0.8;
+} */
+
+.caption a {
+  color: rgb(66, 66, 66);
+}
+
+
 
 .mytestimonials {
   margin-top: 7%;
@@ -200,7 +252,8 @@ hr {
   } */
 
   .myimg {
-    max-width: 100%
+    max-width: 80%;
   }
+
 
 }
