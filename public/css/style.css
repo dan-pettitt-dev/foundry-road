@@ -14,6 +14,10 @@
   font-style: normal;
 }
 
+.row {
+  margin-right: 0
+}
+
 body,
 html {
   height: 100%;
@@ -75,6 +79,16 @@ hr {
   width: 90%;
 }
 
+.slide-in-section {
+  width: 0;
+  border-top: 10px solid #ffa51f;
+  transition: width 1s ease;
+}
+
+.slide-in-section.is-visible {
+  width: 90%;
+}
+
 .mytext {
   padding: 5% 5% 0 5%;
 }
@@ -84,6 +98,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 2rem;
 }
 
 .image-wrapper {
@@ -102,30 +117,9 @@ hr {
   opacity: 0.8;
 }
 
-
-/* 
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  color: rgb(66, 66, 66);
-  width: 100%;
-  padding: 10px;
-  text-align: right;
-  font-size: 0.6em;
-  opacity: 0.8;
-} */
-
 .caption a {
   color: rgb(66, 66, 66);
 }
-
-
 
 .mytestimonials {
   margin-top: 7%;
@@ -136,6 +130,9 @@ hr {
   color: white;
   font-size: 1.25rem;
   border: none;
+  height: 205px;
+  border-radius: 25px;
+  padding: 0 3%;
 }
 
 #sig {
@@ -151,8 +148,15 @@ hr {
 }
 
 .offcanvas li {
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #ffa51f;
 }
+
+
+.nav-link {
+  color: #353535;
+} 
+
+
 
 /* Media Queries */
 
@@ -180,10 +184,11 @@ hr {
   .card {
     font-size: 0.8rem;
     margin-bottom: 20px;
+    height: 150px;
   }
 
   .myimg {
-    padding-left: 5%;
+    margin-left: 11%;
   }
   
   p, li {
@@ -216,7 +221,8 @@ hr {
   }
 
   .myimg {
-    max-width: 92.5%
+    max-width: 92.5%;
+    margin-left: 11%;
   }
 
   p, li {
@@ -252,8 +258,11 @@ hr {
   } */
 
   .myimg {
-    max-width: 80%;
+    max-width: 92.5%;
   }
 
+  .card {
+    height: 210px
+  }
 
 }
