@@ -40,6 +40,16 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(132, 130, 130);
 }
 
+.mybtn {
+  color: #129490;
+  border-color: #129490;
+}
+
+.mybtn:hover {
+  color: white;
+  background-color: #129490;
+}
+
 .my-greet {
   text-align: center;
   background-color: #ffde59;
