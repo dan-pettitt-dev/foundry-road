@@ -103,6 +103,25 @@ hr {
   padding: 5% 5% 0 5%;
 }
 
+.info {
+  text-align: center;
+}
+
+.info hr {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mymap {
+  border-radius: 25px;
+  padding-top: 2%;
+}
+
+.myicon {
+  margin-right: 3%;
+}
+
 .image-container {
   position: relative;
   display: flex;
@@ -212,6 +231,14 @@ hr {
 
   .pt-5 {
     padding-top: 0!important;
+  }
+
+  ul {
+    margin-top: 15px;
+  }
+
+  .mymap {
+    width: 90%;
   }
 
 }
