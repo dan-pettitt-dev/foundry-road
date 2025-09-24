@@ -54,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   background-color: #ffde59;
   padding: 3%;
+  margin-top: 75px;
 }
 
 .myfooter {
@@ -204,6 +205,7 @@ hr {
   text-align: center;
   background-color: #ffde59;
   padding: 10%;
+  margin-top: 0;
 }
 
   .offcanvas,

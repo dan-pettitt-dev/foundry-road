@@ -93,22 +93,14 @@
             <a class="nav-link" href="workshops.html">Workshops</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="policy.html">Policy & Procedures</a>
+            <a class="nav-link" href="curriculum.html">Curriculum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="policy.html">Policies & Procedures</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="privacy-notice.html">Privacy Notice</a>
           </li>
-          <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-  
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another Action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-   -->
         </ul>
         <br>
         <a href="https://www.facebook.com/foundryroadpreschool" target="_blank"><span
@@ -140,7 +132,9 @@
               { title: 'Pricing & Information', url: 'pricing.html' },
               { title: 'Diary Dates', url: 'diary-dates.html' },
               { title: 'Workshops', url: 'workshops.html' },
-              { title: 'Privacy Notice', url: 'privacy-notice.html' }
+              { title: 'Privacy Notice', url: 'privacy-notice.html' },
+              { title: 'Policies & Procedures', url: 'policy.html' },
+              { title: 'Curriculum', url: 'curriculum.html' }
             ];
 
             let results = '';
@@ -168,3 +162,69 @@
     </div>
   </div>
 </nav>
+
+<style>
+  .navbar {
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1030;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.shrink {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand img,
+  .navbar-toggler-sm,
+  .btn-link {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.shrink .navbar-brand img {
+    height: 100px;
+  }
+
+  .navbar.shrink .navbar-toggler-sm {
+    transform: scale(0.8);
+  }
+
+  .navbar.shrink .btn-link {
+    transform: scale(0.8);
+  }
+
+  body {
+    padding-top: 150px; /* Adjusted to ensure content is not cut off by the fixed header */
+  }
+
+  @media (max-width: 768px) {
+    .navbar.shrink {
+      padding: 0.3rem 0.5rem; /* Smaller padding for mobile */
+    }
+
+    .navbar.shrink .navbar-brand img {
+      height: 80px; /* Smaller logo for mobile */
+    }
+
+    .navbar.shrink .navbar-toggler-sm {
+      transform: scale(0.7);
+    }
+
+    .navbar.shrink .btn-link {
+      transform: scale(0.7);
+    }
+  }
+</style>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
+    }
+  });
+</script>
