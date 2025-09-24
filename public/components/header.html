@@ -93,6 +93,9 @@
             <a class="nav-link" href="workshops.html">Workshops</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="policy.html">Policy & Procedures</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="privacy-notice.html">Privacy Notice</a>
           </li>
           <!-- <li class="nav-item dropdown">
@@ -119,10 +122,48 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" id="site-search-form" role="search">
+          <input class="form-control me-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success mybtn" type="submit">Search</button>
         </form>
+        <div id="search-results" class="mt-3"></div>
+
+        <script>
+          document.getElementById('site-search-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const query = document.getElementById('search-input').value.toLowerCase();
+
+            // List of pages to search
+            const pages = [
+              { title: 'Home', url: 'index.html' },
+              { title: 'Contact', url: 'contact.html' },
+              { title: 'Pricing & Information', url: 'pricing.html' },
+              { title: 'Diary Dates', url: 'diary-dates.html' },
+              { title: 'Workshops', url: 'workshops.html' },
+              { title: 'Privacy Notice', url: 'privacy-notice.html' }
+            ];
+
+            let results = '';
+            let count = 0;
+
+            pages.forEach(page => {
+              fetch(page.url)
+                .then(response => response.text())
+                .then(html => {
+                  if (html.toLowerCase().includes(query)) {
+                    results += `<li><a href="${page.url}">${page.title}</a></li>`;
+                    count++;
+                  }
+
+                  if (count === 0) {
+                    document.getElementById('search-results').innerHTML = '<p>No results found.</p>';
+                  } else {
+                    document.getElementById('search-results').innerHTML = `<ul>${results}</ul>`;
+                  }
+                });
+            });
+          });
+        </script>
       </div>
     </div>
   </div>
