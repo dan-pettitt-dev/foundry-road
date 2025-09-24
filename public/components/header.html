@@ -56,58 +56,175 @@
 </nav> -->
 <nav class="navbar navbar-light bg-white row">
   <div class="container-fluid">
-  <button class="navbar-toggler-sm border-0 bg-white col-4" type="button" data-bs-toggle="offcanvas"
-    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-    <span class="navbar-toggler-icon mynav-button"></span>
-  </button>
-  <div class="container col d-flex justify-content-center align-items-center">
-    <a class="navbar-brand mx-auto" href="index.html">
-      <img height="150" class="d-inline-block align-middle" src="img/foundry_road_logo.png"
-        alt="Foundry Road Pre-School Logo">
-    </a>
-  </div>
-  <button class="btn btn-link ms-auto col" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
-    aria-controls="offcanvasSearch">
-    <i class="fas fa-search mynav-button"></i>
-  </button>
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><b>Menu</b></h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button class="navbar-toggler-sm border-0 bg-white col-4" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon mynav-button"></span>
+    </button>
+    <div class="container col d-flex justify-content-center align-items-center">
+      <a class="navbar-brand mx-auto" href="index.html">
+        <img height="150" class="d-inline-block align-middle" src="img/foundry_road_logo.png"
+          alt="Foundry Road Pre-School Logo">
+      </a>
     </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-        <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-  
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another Action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-  
+    <button class="btn btn-link ms-auto col" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch"
+      aria-controls="offcanvasSearch">
+      <i class="fas fa-search mynav-button"></i>
+    </button>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><b>Menu</b></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing & Information</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="diary-dates.html">Diary Dates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="workshops.html">Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="curriculum.html">Curriculum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="policy.html">Policies & Procedures</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy-notice.html">Privacy Notice</a>
+          </li>
+        </ul>
+        <br>
+        <a href="https://www.facebook.com/foundryroadpreschool" target="_blank"><span
+            class="fa-brands fa-facebook fa-2xl" style="display: inline;"></span></a>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSearchLabel">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form class="d-flex" id="site-search-form" role="search">
+          <input class="form-control me-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success mybtn" type="submit">Search</button>
+        </form>
+        <div id="search-results" class="mt-3"></div>
+
+        <script>
+          document.getElementById('site-search-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const query = document.getElementById('search-input').value.toLowerCase();
+
+            // List of pages to search
+            const pages = [
+              { title: 'Home', url: 'index.html' },
+              { title: 'Contact', url: 'contact.html' },
+              { title: 'Pricing & Information', url: 'pricing.html' },
+              { title: 'Diary Dates', url: 'diary-dates.html' },
+              { title: 'Workshops', url: 'workshops.html' },
+              { title: 'Privacy Notice', url: 'privacy-notice.html' },
+              { title: 'Policies & Procedures', url: 'policy.html' },
+              { title: 'Curriculum', url: 'curriculum.html' }
+            ];
+
+            let results = '';
+            let count = 0;
+
+            pages.forEach(page => {
+              fetch(page.url)
+                .then(response => response.text())
+                .then(html => {
+                  if (html.toLowerCase().includes(query)) {
+                    results += `<li><a href="${page.url}">${page.title}</a></li>`;
+                    count++;
+                  }
+
+                  if (count === 0) {
+                    document.getElementById('search-results').innerHTML = '<p>No results found.</p>';
+                  } else {
+                    document.getElementById('search-results').innerHTML = `<ul>${results}</ul>`;
+                  }
+                });
+            });
+          });
+        </script>
+      </div>
     </div>
   </div>
-  
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasSearchLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasSearchLabel">Search</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success mybtn" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-  </div>
-  </nav>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1030;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.shrink {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand img,
+  .navbar-toggler-sm,
+  .btn-link {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar.shrink .navbar-brand img {
+    height: 100px;
+  }
+
+  .navbar.shrink .navbar-toggler-sm {
+    transform: scale(0.8);
+  }
+
+  .navbar.shrink .btn-link {
+    transform: scale(0.8);
+  }
+
+  body {
+    padding-top: 150px; /* Adjusted to ensure content is not cut off by the fixed header */
+  }
+
+  @media (max-width: 768px) {
+    .navbar.shrink {
+      padding: 0.3rem 0.5rem; /* Smaller padding for mobile */
+    }
+
+    .navbar.shrink .navbar-brand img {
+      height: 80px; /* Smaller logo for mobile */
+    }
+
+    .navbar.shrink .navbar-toggler-sm {
+      transform: scale(0.7);
+    }
+
+    .navbar.shrink .btn-link {
+      transform: scale(0.7);
+    }
+  }
+</style>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('shrink');
+    } else {
+      navbar.classList.remove('shrink');
+    }
+  });
+</script>

@@ -1,0 +1,260 @@
+11:40:30.134160 git.c:460               trace: built-in: git push origin development
+11:40:30.146237 run-command.c:655       trace: run_command: GIT_DIR=.git git remote-https origin https://github.com/dan-pettitt-dev/foundry-road.git
+11:40:30.175165 git.c:750               trace: exec: git-remote-https origin https://github.com/dan-pettitt-dev/foundry-road.git
+11:40:30.176185 run-command.c:655       trace: run_command: git-remote-https origin https://github.com/dan-pettitt-dev/foundry-road.git
+11:40:30.262104 http.c:699              == Info: Couldn't find host github.com in the .netrc file; using defaults
+11:40:30.312390 http.c:699              == Info: Host github.com:443 was resolved.
+11:40:30.312406 http.c:699              == Info: IPv6: (none)
+11:40:30.312409 http.c:699              == Info: IPv4: 20.26.156.215
+11:40:30.312802 http.c:699              == Info:   Trying 20.26.156.215:443...
+11:40:30.336363 http.c:699              == Info: Connected to github.com (20.26.156.215) port 443
+11:40:30.373704 http.c:699              == Info: ALPN: curl offers h2,http/1.1
+11:40:30.377219 http.c:699              == Info: (304) (OUT), TLS handshake, Client hello (1):
+11:40:30.413302 http.c:699              == Info:  CAfile: /etc/ssl/cert.pem
+11:40:30.413362 http.c:699              == Info:  CApath: none
+11:40:30.413894 http.c:699              == Info: (304) (IN), TLS handshake, Server hello (2):
+11:40:30.415156 http.c:699              == Info: (304) (IN), TLS handshake, Unknown (8):
+11:40:30.415318 http.c:699              == Info: (304) (IN), TLS handshake, Certificate (11):
+11:40:30.420773 http.c:699              == Info: (304) (IN), TLS handshake, CERT verify (15):
+11:40:30.421299 http.c:699              == Info: (304) (IN), TLS handshake, Finished (20):
+11:40:30.421416 http.c:699              == Info: (304) (OUT), TLS handshake, Finished (20):
+11:40:30.421447 http.c:699              == Info: SSL connection using TLSv1.3 / AEAD-AES128-GCM-SHA256 / [blank] / UNDEF
+11:40:30.421502 http.c:699              == Info: ALPN: server accepted h2
+11:40:30.421516 http.c:699              == Info: Server certificate:
+11:40:30.421617 http.c:699              == Info:  subject: CN=github.com
+11:40:30.421679 http.c:699              == Info:  start date: Feb  5 00:00:00 2025 GMT
+11:40:30.421706 http.c:699              == Info:  expire date: Feb  5 23:59:59 2026 GMT
+11:40:30.421724 http.c:699              == Info:  subjectAltName: host "github.com" matched cert's "github.com"
+11:40:30.421766 http.c:699              == Info:  issuer: C=GB; ST=Greater Manchester; L=Salford; O=Sectigo Limited; CN=Sectigo ECC Domain Validation Secure Server CA
+11:40:30.421772 http.c:699              == Info:  SSL certificate verify ok.
+11:40:30.423843 http.c:699              == Info: using HTTP/2
+11:40:30.424335 http.c:699              == Info: [HTTP/2] [1] OPENED stream for https://github.com/dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack
+11:40:30.424343 http.c:699              == Info: [HTTP/2] [1] [:method: GET]
+11:40:30.424346 http.c:699              == Info: [HTTP/2] [1] [:scheme: https]
+11:40:30.424349 http.c:699              == Info: [HTTP/2] [1] [:authority: github.com]
+11:40:30.424352 http.c:699              == Info: [HTTP/2] [1] [:path: /dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack]
+11:40:30.424354 http.c:699              == Info: [HTTP/2] [1] [user-agent: git/2.39.2]
+11:40:30.424357 http.c:699              == Info: [HTTP/2] [1] [accept: */*]
+11:40:30.424359 http.c:699              == Info: [HTTP/2] [1] [accept-encoding: deflate, gzip]
+11:40:30.424361 http.c:699              == Info: [HTTP/2] [1] [accept-language: en-US, *;q=0.9]
+11:40:30.424364 http.c:699              == Info: [HTTP/2] [1] [pragma: no-cache]
+11:40:30.425409 http.c:646              => Send header, 0000000221 bytes (0x000000dd)
+11:40:30.425424 http.c:658              => Send header: GET /dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack HTTP/2
+11:40:30.425427 http.c:658              => Send header: Host: github.com
+11:40:30.425429 http.c:658              => Send header: User-Agent: git/2.39.2
+11:40:30.425431 http.c:658              => Send header: Accept: */*
+11:40:30.425433 http.c:658              => Send header: Accept-Encoding: deflate, gzip
+11:40:30.425436 http.c:658              => Send header: Accept-Language: en-US, *;q=0.9
+11:40:30.425439 http.c:658              => Send header: Pragma: no-cache
+11:40:30.425441 http.c:658              => Send header:
+11:40:30.426460 http.c:699              == Info: Request completely sent off
+11:40:30.542801 http.c:646              <= Recv header, 0000000013 bytes (0x0000000d)
+11:40:30.550340 http.c:658              <= Recv header: HTTP/2 401
+11:40:30.559815 http.c:646              <= Recv header, 0000000026 bytes (0x0000001a)
+11:40:30.559858 http.c:658              <= Recv header: server: GitHub-Babel/3.0
+11:40:30.561285 http.c:646              <= Recv header, 0000000054 bytes (0x00000036)
+11:40:30.561307 http.c:658              <= Recv header: content-security-policy: default-src 'none'; sandbox
+11:40:30.561319 http.c:646              <= Recv header, 0000000041 bytes (0x00000029)
+11:40:30.561321 http.c:658              <= Recv header: content-type: text/plain; charset=UTF-8
+11:40:30.561359 http.c:646              <= Recv header, 0000000040 bytes (0x00000028)
+11:40:30.561362 http.c:658              <= Recv header: www-authenticate: Basic realm="GitHub"
+11:40:30.561381 http.c:646              <= Recv header, 0000000020 bytes (0x00000014)
+11:40:30.561384 http.c:658              <= Recv header: content-length: 74
+11:40:30.561404 http.c:646              <= Recv header, 0000000037 bytes (0x00000025)
+11:40:30.561408 http.c:658              <= Recv header: date: Sat, 20 Sep 2025 10:40:30 GMT
+11:40:30.561414 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:30.561416 http.c:658              <= Recv header: x-frame-options: DENY
+11:40:30.561421 http.c:646              <= Recv header, 0000000073 bytes (0x00000049)
+11:40:30.561424 http.c:658              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+11:40:30.561447 http.c:646              <= Recv header, 0000000056 bytes (0x00000038)
+11:40:30.561464 http.c:658              <= Recv header: x-github-request-id: 3DF3:A1E76:678E4C:826E31:68CE849E
+11:40:30.562328 http.c:646              <= Recv header, 0000000002 bytes (0x00000002)
+11:40:30.562342 http.c:658              <= Recv header:
+11:40:30.567874 http.c:699              == Info: Connection #0 to host github.com left intact
+11:40:30.568798 run-command.c:655       trace: run_command: 'git credential-osxkeychain get'
+11:40:30.651952 git.c:750               trace: exec: git-credential-osxkeychain get
+11:40:30.652834 run-command.c:655       trace: run_command: git-credential-osxkeychain get
+11:40:30.729644 http.c:699              == Info: Found bundle for host: 0x7fd412f18d60 [can multiplex]
+11:40:30.729709 http.c:699              == Info: Re-using existing connection with host github.com
+11:40:30.729822 http.c:699              == Info: Server auth using Basic with user '117352866'
+11:40:30.729868 http.c:699              == Info: [HTTP/2] [3] OPENED stream for https://github.com/dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack
+11:40:30.729873 http.c:699              == Info: [HTTP/2] [3] [:method: GET]
+11:40:30.729876 http.c:699              == Info: [HTTP/2] [3] [:scheme: https]
+11:40:30.729878 http.c:699              == Info: [HTTP/2] [3] [:authority: github.com]
+11:40:30.729881 http.c:699              == Info: [HTTP/2] [3] [:path: /dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack]
+11:40:30.729884 http.c:699              == Info: [HTTP/2] [3] [authorization: Basic MTE3MzUyODY2Omdob19XY3drSThhblpHOHBTZ0hKWU9EeDJCMUdieENTcHEwQnhEcjM=]
+11:40:30.729887 http.c:699              == Info: [HTTP/2] [3] [user-agent: git/2.39.2]
+11:40:30.729889 http.c:699              == Info: [HTTP/2] [3] [accept: */*]
+11:40:30.729891 http.c:699              == Info: [HTTP/2] [3] [accept-encoding: deflate, gzip]
+11:40:30.729894 http.c:699              == Info: [HTTP/2] [3] [accept-language: en-US, *;q=0.9]
+11:40:30.729896 http.c:699              == Info: [HTTP/2] [3] [pragma: no-cache]
+11:40:30.730111 http.c:646              => Send header, 0000000312 bytes (0x00000138)
+11:40:30.730118 http.c:658              => Send header: GET /dan-pettitt-dev/foundry-road.git/info/refs?service=git-receive-pack HTTP/2
+11:40:30.730120 http.c:658              => Send header: Host: github.com
+11:40:30.730122 http.c:658              => Send header: Authorization: Basic <redacted>
+11:40:30.730124 http.c:658              => Send header: User-Agent: git/2.39.2
+11:40:30.730128 http.c:658              => Send header: Accept: */*
+11:40:30.730130 http.c:658              => Send header: Accept-Encoding: deflate, gzip
+11:40:30.730132 http.c:658              => Send header: Accept-Language: en-US, *;q=0.9
+11:40:30.730134 http.c:658              => Send header: Pragma: no-cache
+11:40:30.730135 http.c:658              => Send header:
+11:40:30.730161 http.c:699              == Info: Request completely sent off
+11:40:30.883534 http.c:646              <= Recv header, 0000000013 bytes (0x0000000d)
+11:40:30.883554 http.c:658              <= Recv header: HTTP/2 200
+11:40:30.883568 http.c:646              <= Recv header, 0000000026 bytes (0x0000001a)
+11:40:30.883571 http.c:658              <= Recv header: server: GitHub-Babel/3.0
+11:40:30.883578 http.c:646              <= Recv header, 0000000060 bytes (0x0000003c)
+11:40:30.883581 http.c:658              <= Recv header: content-type: application/x-git-receive-pack-advertisement
+11:40:30.883587 http.c:646              <= Recv header, 0000000054 bytes (0x00000036)
+11:40:30.883591 http.c:658              <= Recv header: content-security-policy: default-src 'none'; sandbox
+11:40:30.883596 http.c:646              <= Recv header, 0000000040 bytes (0x00000028)
+11:40:30.883599 http.c:658              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+11:40:30.883710 http.c:646              <= Recv header, 0000000018 bytes (0x00000012)
+11:40:30.883716 http.c:658              <= Recv header: pragma: no-cache
+11:40:30.883722 http.c:646              <= Recv header, 0000000053 bytes (0x00000035)
+11:40:30.883725 http.c:658              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+11:40:30.883731 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:30.883734 http.c:658              <= Recv header: vary: Accept-Encoding
+11:40:30.883738 http.c:646              <= Recv header, 0000000037 bytes (0x00000025)
+11:40:30.883741 http.c:658              <= Recv header: date: Sat, 20 Sep 2025 10:40:30 GMT
+11:40:30.883745 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:30.883748 http.c:658              <= Recv header: x-frame-options: DENY
+11:40:30.883753 http.c:646              <= Recv header, 0000000073 bytes (0x00000049)
+11:40:30.883756 http.c:658              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+11:40:30.883761 http.c:646              <= Recv header, 0000000056 bytes (0x00000038)
+11:40:30.883764 http.c:658              <= Recv header: x-github-request-id: 3DF3:A1E76:678E81:826E6D:68CE849E
+11:40:30.883769 http.c:646              <= Recv header, 0000000002 bytes (0x00000002)
+11:40:30.883772 http.c:658              <= Recv header:
+11:40:30.883838 http.c:699              == Info: Connection #0 to host github.com left intact
+11:40:30.883861 run-command.c:655       trace: run_command: 'git credential-osxkeychain store'
+11:40:30.967451 git.c:750               trace: exec: git-credential-osxkeychain store
+11:40:30.970748 run-command.c:655       trace: run_command: git-credential-osxkeychain store
+11:40:31.089493 pkt-line.c:80           packet:          git< # service=git-receive-pack
+11:40:31.089517 pkt-line.c:80           packet:          git< 0000
+11:40:31.089931 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/development\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 push-options
+11:40:31.090275 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/main
+11:40:31.090281 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/production
+11:40:31.090285 pkt-line.c:80           packet:          git< 0547e2275762a37af02c2fb0598e11d64e1912e7 refs/heads/templating
+11:40:31.090301 pkt-line.c:80           packet:          git< 35e5a4539f4e3e438338a8e08638ce71c0b09f4f refs/heads/templating_1
+11:40:31.090306 pkt-line.c:80           packet:          git< 0000
+11:40:31.095319 pkt-line.c:80           packet:          git> refs/heads/development:refs/heads/development
+11:40:31.095324 pkt-line.c:80           packet:          git> 0000
+11:40:31.095340 run-command.c:655       trace: run_command: git send-pack --stateless-rpc --helper-status --thin --no-progress https://github.com/dan-pettitt-dev/foundry-road.git/ --stdin
+11:40:31.117140 git.c:460               trace: built-in: git send-pack --stateless-rpc --helper-status --thin --no-progress https://github.com/dan-pettitt-dev/foundry-road.git/ --stdin
+11:40:31.118528 pkt-line.c:80           packet:          git< refs/heads/development:refs/heads/development
+11:40:31.118539 pkt-line.c:80           packet:          git< 0000
+11:40:31.118750 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/development\0report-status report-status-v2 delete-refs side-band-64k ofs-delta atomic object-format=sha1 quiet agent=github/spokes-receive-pack-acac8763c60f636c44baaf5c3887895cf5f55c30 push-options
+11:40:31.118938 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/main
+11:40:31.118947 pkt-line.c:80           packet:          git< 28a13f2bbfc43953420368c068dcdea693f4d926 refs/heads/production
+11:40:31.118951 pkt-line.c:80           packet:          git< 0547e2275762a37af02c2fb0598e11d64e1912e7 refs/heads/templating
+11:40:31.118954 pkt-line.c:80           packet:          git< 35e5a4539f4e3e438338a8e08638ce71c0b09f4f refs/heads/templating_1
+11:40:31.118957 pkt-line.c:80           packet:          git< 0000
+11:40:31.121942 pkt-line.c:80           packet:          git> 28a13f2bbfc43953420368c068dcdea693f4d926 3d82560337a9d79bb9b4218ef115d6b2e8dd5426 refs/heads/development\0 report-status-v2 side-band-64k quiet object-format=sha1 agent=git/2.39.2
+11:40:31.121948 pkt-line.c:80           packet:          git> 0000
+11:40:31.122186 run-command.c:655       trace: run_command: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+11:40:31.122168 pkt-line.c:80           packet:          git< 00b628a13f2bbfc43953420368c068dcdea693f4d926 3d82560337a9d79bb9b4218ef115d6b2e8dd5426 refs/heads/development\0 report-status-v2 side-band-64k quiet object-format=sha1 agent=git/2.39.20000
+11:40:31.216724 git.c:460               trace: built-in: git pack-objects --all-progress-implied --revs --stdout --thin --delta-base-offset -q
+11:40:31.436882 pkt-line.c:80           packet:          git< PACK ...
+11:40:31.579683 http.c:699              == Info: Found bundle for host: 0x7fd412f18d60 [can multiplex]
+11:40:31.579705 http.c:699              == Info: Re-using existing connection with host github.com
+11:40:31.579724 http.c:699              == Info: Server auth using Basic with user '117352866'
+11:40:31.579860 http.c:699              == Info: [HTTP/2] [5] OPENED stream for https://github.com/dan-pettitt-dev/foundry-road.git/git-receive-pack
+11:40:31.579865 http.c:699              == Info: [HTTP/2] [5] [:method: POST]
+11:40:31.579867 http.c:699              == Info: [HTTP/2] [5] [:scheme: https]
+11:40:31.579870 http.c:699              == Info: [HTTP/2] [5] [:authority: github.com]
+11:40:31.579872 http.c:699              == Info: [HTTP/2] [5] [:path: /dan-pettitt-dev/foundry-road.git/git-receive-pack]
+11:40:31.579875 http.c:699              == Info: [HTTP/2] [5] [authorization: Basic MTE3MzUyODY2Omdob19XY3drSThhblpHOHBTZ0hKWU9EeDJCMUdieENTcHEwQnhEcjM=]
+11:40:31.579877 http.c:699              == Info: [HTTP/2] [5] [user-agent: git/2.39.2]
+11:40:31.579880 http.c:699              == Info: [HTTP/2] [5] [content-type: application/x-git-receive-pack-request]
+11:40:31.579882 http.c:699              == Info: [HTTP/2] [5] [accept: application/x-git-receive-pack-result]
+11:40:31.579884 http.c:699              == Info: [HTTP/2] [5] [content-length: 4]
+11:40:31.580297 http.c:646              => Send header, 0000000319 bytes (0x0000013f)
+11:40:31.580305 http.c:658              => Send header: POST /dan-pettitt-dev/foundry-road.git/git-receive-pack HTTP/2
+11:40:31.580308 http.c:658              => Send header: Host: github.com
+11:40:31.580310 http.c:658              => Send header: Authorization: Basic <redacted>
+11:40:31.580312 http.c:658              => Send header: User-Agent: git/2.39.2
+11:40:31.580315 http.c:658              => Send header: Content-Type: application/x-git-receive-pack-request
+11:40:31.580317 http.c:658              => Send header: Accept: application/x-git-receive-pack-result
+11:40:31.580319 http.c:658              => Send header: Content-Length: 4
+11:40:31.580321 http.c:658              => Send header:
+11:40:31.580342 http.c:699              == Info: upload completely sent off: 4 bytes
+11:40:31.734751 http.c:646              <= Recv header, 0000000013 bytes (0x0000000d)
+11:40:31.734791 http.c:658              <= Recv header: HTTP/2 200
+11:40:31.735400 http.c:646              <= Recv header, 0000000026 bytes (0x0000001a)
+11:40:31.735424 http.c:658              <= Recv header: server: GitHub-Babel/3.0
+11:40:31.735438 http.c:646              <= Recv header, 0000000053 bytes (0x00000035)
+11:40:31.735444 http.c:658              <= Recv header: content-type: application/x-git-receive-pack-result
+11:40:31.735454 http.c:646              <= Recv header, 0000000054 bytes (0x00000036)
+11:40:31.735458 http.c:658              <= Recv header: content-security-policy: default-src 'none'; sandbox
+11:40:31.735596 http.c:646              <= Recv header, 0000000040 bytes (0x00000028)
+11:40:31.735605 http.c:658              <= Recv header: expires: Fri, 01 Jan 1980 00:00:00 GMT
+11:40:31.735611 http.c:646              <= Recv header, 0000000018 bytes (0x00000012)
+11:40:31.735613 http.c:658              <= Recv header: pragma: no-cache
+11:40:31.735617 http.c:646              <= Recv header, 0000000053 bytes (0x00000035)
+11:40:31.735619 http.c:658              <= Recv header: cache-control: no-cache, max-age=0, must-revalidate
+11:40:31.735623 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:31.735625 http.c:658              <= Recv header: vary: Accept-Encoding
+11:40:31.735631 http.c:646              <= Recv header, 0000000019 bytes (0x00000013)
+11:40:31.735634 http.c:658              <= Recv header: content-length: 0
+11:40:31.735637 http.c:646              <= Recv header, 0000000037 bytes (0x00000025)
+11:40:31.735639 http.c:658              <= Recv header: date: Sat, 20 Sep 2025 10:40:31 GMT
+11:40:31.735643 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:31.735645 http.c:658              <= Recv header: x-frame-options: DENY
+11:40:31.735648 http.c:646              <= Recv header, 0000000073 bytes (0x00000049)
+11:40:31.735651 http.c:658              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+11:40:31.735657 http.c:646              <= Recv header, 0000000056 bytes (0x00000038)
+11:40:31.735659 http.c:658              <= Recv header: x-github-request-id: 3DF3:A1E76:678EFC:826F06:68CE849E
+11:40:31.735665 http.c:646              <= Recv header, 0000000002 bytes (0x00000002)
+11:40:31.735667 http.c:658              <= Recv header:
+11:40:31.735735 http.c:699              == Info: Connection #0 to host github.com left intact
+11:40:31.736591 http.c:699              == Info: Found bundle for host: 0x7fd412f18d60 [can multiplex]
+11:40:31.736797 http.c:699              == Info: Re-using existing connection with host github.com
+11:40:31.736852 http.c:699              == Info: Server auth using Basic with user '117352866'
+11:40:31.737087 http.c:699              == Info: [HTTP/2] [7] OPENED stream for https://github.com/dan-pettitt-dev/foundry-road.git/git-receive-pack
+11:40:31.737167 http.c:699              == Info: [HTTP/2] [7] [:method: POST]
+11:40:31.737171 http.c:699              == Info: [HTTP/2] [7] [:scheme: https]
+11:40:31.737174 http.c:699              == Info: [HTTP/2] [7] [:authority: github.com]
+11:40:31.737176 http.c:699              == Info: [HTTP/2] [7] [:path: /dan-pettitt-dev/foundry-road.git/git-receive-pack]
+11:40:31.737179 http.c:699              == Info: [HTTP/2] [7] [authorization: Basic MTE3MzUyODY2Omdob19XY3drSThhblpHOHBTZ0hKWU9EeDJCMUdieENTcHEwQnhEcjM=]
+11:40:31.737181 http.c:699              == Info: [HTTP/2] [7] [user-agent: git/2.39.2]
+11:40:31.737184 http.c:699              == Info: [HTTP/2] [7] [accept-encoding: deflate, gzip]
+11:40:31.737186 http.c:699              == Info: [HTTP/2] [7] [content-type: application/x-git-receive-pack-request]
+11:40:31.737189 http.c:699              == Info: [HTTP/2] [7] [accept: application/x-git-receive-pack-result]
+11:40:31.737191 http.c:699              == Info: [HTTP/2] [7] [accept-language: en-US, *;q=0.9]
+11:40:31.737291 http.c:646              => Send header, 0000000365 bytes (0x0000016d)
+11:40:31.737297 http.c:658              => Send header: POST /dan-pettitt-dev/foundry-road.git/git-receive-pack HTTP/2
+11:40:31.737299 http.c:658              => Send header: Host: github.com
+11:40:31.737301 http.c:658              => Send header: Authorization: Basic <redacted>
+11:40:31.737303 http.c:658              => Send header: User-Agent: git/2.39.2
+11:40:31.737305 http.c:658              => Send header: Accept-Encoding: deflate, gzip
+11:40:31.737307 http.c:658              => Send header: Content-Type: application/x-git-receive-pack-request
+11:40:31.737309 http.c:658              => Send header: Accept: application/x-git-receive-pack-result
+11:40:31.737311 http.c:658              => Send header: Accept-Language: en-US, *;q=0.9
+11:40:31.737312 http.c:658              => Send header:
+11:40:31.737317 http.c:699              == Info: upload completely sent off: 14 bytes
+11:40:31.871886 http.c:646              <= Recv header, 0000000013 bytes (0x0000000d)
+11:40:31.871907 http.c:658              <= Recv header: HTTP/2 400
+11:40:31.871935 http.c:646              <= Recv header, 0000000026 bytes (0x0000001a)
+11:40:31.871938 http.c:658              <= Recv header: server: GitHub-Babel/3.0
+11:40:31.871944 http.c:646              <= Recv header, 0000000054 bytes (0x00000036)
+11:40:31.871947 http.c:658              <= Recv header: content-security-policy: default-src 'none'; sandbox
+11:40:31.871951 http.c:646              <= Recv header, 0000000041 bytes (0x00000029)
+11:40:31.871954 http.c:658              <= Recv header: content-type: text/plain; charset=UTF-8
+11:40:31.871959 http.c:646              <= Recv header, 0000000019 bytes (0x00000013)
+11:40:31.871961 http.c:658              <= Recv header: content-length: 0
+11:40:31.871964 http.c:646              <= Recv header, 0000000037 bytes (0x00000025)
+11:40:31.872010 http.c:658              <= Recv header: date: Sat, 20 Sep 2025 10:40:31 GMT
+11:40:31.872052 http.c:646              <= Recv header, 0000000023 bytes (0x00000017)
+11:40:31.872058 http.c:658              <= Recv header: x-frame-options: DENY
+11:40:31.872076 http.c:646              <= Recv header, 0000000073 bytes (0x00000049)
+11:40:31.872082 http.c:658              <= Recv header: strict-transport-security: max-age=31536000; includeSubDomains; preload
+11:40:31.872090 http.c:646              <= Recv header, 0000000056 bytes (0x00000038)
+11:40:31.872095 http.c:658              <= Recv header: x-github-request-id: 3DF3:A1E76:678F18:826F29:68CE849F
+11:40:31.872104 http.c:646              <= Recv header, 0000000002 bytes (0x00000002)
+11:40:31.872109 http.c:658              <= Recv header:
+11:40:31.872228 http.c:699              == Info: Connection #0 to host github.com left intact
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+send-pack: unexpected disconnect while reading sideband packet
+11:40:32.011184 pkt-line.c:80           packet:          git> 0000
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
