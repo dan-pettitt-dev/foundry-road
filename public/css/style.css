@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 .my-greet {
   text-align: center;
   background-color: #ffde59;
-  padding: 10%;
+  padding: 3%;
 }
 
 .myfooter {
@@ -200,6 +200,12 @@ hr {
     font-size: 1.5srem;
   }
   
+  .my-greet {
+  text-align: center;
+  background-color: #ffde59;
+  padding: 10%;
+}
+
   .offcanvas,
   .offcanvas-title {
     background-color: #ffde59;
